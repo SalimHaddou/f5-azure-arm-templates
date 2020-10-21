@@ -439,7 +439,7 @@
         "storageApiVersion": "2017-10-01",
         "customImage": "[replace(parameters('customImage'), 'OPTIONAL', '')]",
         "useCustomImage": "[not(empty(variables('customImage')))]",
-        "isAcceleratedNetworkingSupported": "[if(greaterOrEquals(variables('bigIpMajorVersionInt'), 15), bool('true'), bool('false'))]",
+        "isAcceleratedNetworkingSupported": "[if(greaterOrEquals(variables('bigIpMajorVersionInt'), 15), bool('false'), bool('false'))]",
         "createNewCustomImage": "[contains(variables('customImage'), 'https://')]",
         "newCustomImageName": "[concat(variables('dnsLabel'), 'image')]",
         "storageProfileArray": {
